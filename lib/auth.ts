@@ -14,6 +14,7 @@ export function generateToken(user: IUser): string {
   return jwt.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
 }
 
+
 export function verifyToken(token: string): any {
   try {
     return jwt.verify(token, JWT_SECRET);
